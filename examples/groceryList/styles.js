@@ -1,16 +1,24 @@
 import { StyleSheet } from '../../dist/react-pdf.es.js';
 
-export default StyleSheet.create({
-  row: {
-    flexGrow: 1,
+const styles = StyleSheet.create({
+  page: {
     flexDirection: 'row',
+    backgroundColor: '#E4E4E4'
   },
-  column: {
-    flexGrow: 1,
+  container: {
+    flex: 1,
+    flexDirection: 'row',
+    '@media max-width: 400': {
+      flexDirection: 'column',
+    },
+  },
+  section: {
+    margin: 10,
+    padding: 10,
+    flexGrow: 1
   },
   text: {
-    margin: 10,
-    fontSize: 10,
-    color: 'white',
-  },
+    "font-size": "18px"
+  }
+
 });
